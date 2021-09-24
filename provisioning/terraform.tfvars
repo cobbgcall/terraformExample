@@ -1,0 +1,12 @@
+deploy_environment  = "DEV"
+vpn_gateway         = false
+cidrblock           = "10.4.0.0/16"
+azs                 = ["us-west-2a", "us-west-2b", "us-west-2c"]
+public_subnets      = ["10.4.1.0/24", "10.4.2.0/24", "10.4.3.0/24"]
+private_subnets     = ["10.4.4.0/22", "10.4.8.0/22", "10.4.12.0/22"]
+whitelist           = ["0.0.0.0/0"]
+internet_access     = "0.0.0.0/0"
+ipv6_cidr_ia        = "::/0"
+azs_nat_gateways    = false
+single_nat          = true
+role_arns_policies  = ["arn:aws:iam::aws:policy/service-role/AmazonEC2RoleforSSM","arn:aws:iam::aws:policy/CloudWatchAgentServerPolicy"]
