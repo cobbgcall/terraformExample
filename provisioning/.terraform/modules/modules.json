@@ -1,1 +1,3 @@
-{"Modules":[{"Key":"vpc","Source":"terraform-aws-modules/vpc/aws","Version":"3.7.0","Dir":".terraform/modules/vpc"},{"Key":"alb_service_sg","Source":"terraform-aws-modules/security-group/aws","Version":"4.3.0","Dir":".terraform/modules/alb_service_sg"},{"Key":"s3_bucket","Source":"terraform-aws-modules/s3-bucket/aws","Version":"2.9.0","Dir":".terraform/modules/s3_bucket"},{"Key":"","Source":"","Dir":"."},{"Key":"alb","Source":"terraform-aws-modules/alb/aws","Version":"6.5.0","Dir":".terraform/modules/alb"}]}
+version https://git-lfs.github.com/spec/v1
+oid sha256:27879351e8384c893f168240cb8d4adba6a9db417bdc73d8c26f8f31287fccb8
+size 513

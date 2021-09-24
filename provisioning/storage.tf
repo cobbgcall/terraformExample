@@ -1,12 +1,3 @@
-#########################################################################################################
-################# This script create storage´s resource #################################################
-#########################################################################################################
-
-module "s3_bucket" {
-    source                                  = "terraform-aws-modules/s3-bucket/aws"
-
-    bucket                                  = "aws-balancer-002580115597"
-    acl                                     = "log-delivery-write"
-
-    attach_elb_log_delivery_policy          = true
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:778a1ff50c3799e5c3928cde21c7b8bb0ac2d552103ffb0fe7367f0bf90bb762
+size 631
