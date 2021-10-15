@@ -3,6 +3,7 @@
 **/.terraform/providers/*
 *.exe
 /provisioning/.terraform/*
+*.plan
 
 # .tfstate files
 *.tfstate
