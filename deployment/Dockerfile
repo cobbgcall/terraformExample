@@ -10,5 +10,5 @@ ADD app/main.go /var/www/goweb/main.go
 RUN go build main.go
 RUN go mod init main
 RUN go install main
-EXPOSE 80
+EXPOSE 9990
 CMD ["main", "run"]
