@@ -3,6 +3,8 @@ package main
 import (
     "fmt"
     "net/http"
+    "bytes"
+    "log"
 )
 
 func main() {
