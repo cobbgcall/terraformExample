@@ -8,8 +8,15 @@ import (
 )
 
 func main() {
+    var(
+        buf     bytes.Buffer
+        logger = log.new(&buf, "logger: ", log.Lshortfile)
+    )
+
     http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+        logger.Print(r)
         fmt.Fprintf(w, "Hello World!!!")
+        logger.Print(w)
     })
 
     http.HandleFunc("/greet/", func(w http.ResponseWriter, r *http.Request) {
