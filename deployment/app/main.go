@@ -3,20 +3,20 @@ package main
 import (
     "fmt"
     "net/http"
-    "bytes"
-    "log"
+//    "bytes"
+//    "log"
 )
 
 func main() {
-    var(
-        buf     bytes.Buffer
-        logger = log.new(&buf, "logger: ", log.Lshortfile)
-    )
+//    var(
+//        buf     bytes.Buffer
+//        logger = log.new(&buf, "logger: ", log.Lshortfile)
+//    )
 
     http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-        logger.Print(r)
+//        logger.Print(r)
         fmt.Fprintf(w, "Hello World!!!")
-        logger.Print(w)
+//        logger.Print(w)
     })
 
     http.HandleFunc("/greet/", func(w http.ResponseWriter, r *http.Request) {
