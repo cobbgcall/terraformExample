@@ -212,6 +212,17 @@ resource "aws_ecs_cluster" "tf_ecs_cluster" {
     name                                   = "tf_ecs_cluster_goweb"
     capacity_providers                     = [aws_ecs_capacity_provider.tf_ecs_capacity_provider.name]
 
+    configuration {
+        execute_command_configuration{
+            logging     = "OVERRIDE"
+
+            log_configuration {
+                cloud_watch_encryption_enabled = true
+                cloud_watch_log_group_name     = aws_cloudwatch_log_group.tf_cw_log_group.name
+            }
+        }
+    }
+
     depends_on = [
         aws_ecs_capacity_provider.tf_ecs_capacity_provider
     ] 
@@ -237,3 +248,11 @@ resource "aws_ecs_capacity_provider" "tf_ecs_capacity_provider" {
     }
 }
 
+#################### CLOUDWATCH LOG GROUP DEFINITION´S #######################################
+resource "aws_cloudwatch_log_group" "tf_cw_log_group" {
+    name                                   = "goweb_logs"
+
+    tags                                   = {
+        functionality      : "logs"
+    }
+}
